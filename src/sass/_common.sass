@@ -1,7 +1,7 @@
 // # SHORT HOWTO
 // ## Sprites
 //     .whatever
-// 			+s(codedby) 
+// 			+s(codedby)
 // ## gradient example
 //     	+g(#232323, #5c5c5c);
 //	   horizontal
@@ -28,9 +28,39 @@
 // =book
 // 	font-family: "book", Arial, sans-serif
 
+// fonts
++font(helvetica-light, helvetica-light)
++font(helvetica-medium, helvetica-medium)
+
+=light
+	font-family: "helvetica-light", Helvetica, sans-serif
+=med
+	font-family: "helvetica-medium", Helvetica, sans-serif
+
+// media
+=r1
+	@media only screen and (max-width: 1020px)
+		@content
+
+=r2
+	@media only screen and (max-width: 920px)
+		@content
+
+=r3
+	@media only screen and (max-width: 660px)
+		@content
+
+// blocks
 body
-	font-family: Arial, sans-serif
-	font-size: 12px
-	line-height: 1.4
-	
-// common blocks
+	min-width: 320px
+	font-size: 18px
+	line-height: 1.2
+	letter-spacing: 0.05em
+	+light
+
+.out
+	overflow: hidden
+
+
+.h2
+	font-size: 48px

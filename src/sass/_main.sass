@@ -1,1 +1,349 @@
-// Normally mainpage styles
+.l
+	max-width: 1110px
+	margin: 0 auto
+	padding: 0 15px
+
+.section
+	transform: skewY(5deg)
+	&.section_blue-bg
+		background: #3096a8
+		.h2
+			color: #86e9fa
+	&__in
+		transform: skewY(-5deg)
+
+.main
+	padding-bottom: 110px
+	&__in
+		position: relative
+		min-height: 715px
+		margin-bottom: 65px
+		background-image: url(../img/main-bg.png)
+		background-position: right bottom
+		background-repeat: no-repeat
+	&__bl
+		float: left
+		margin-top: -17px
+		padding-left: 100px
+		clear: both
+	&__motto
+		max-width: 386px
+		margin-bottom: 30px
+		font-size: 24px
+	&__list
+		+med
+		a
+			display: inline-block
+			color: #3096a8
+			&:hover
+				text-decoration: none
+	&__link
+		color: #3096a8
+	+r1
+		&__bl
+			padding-left: 0
+	+r2
+		&__list a
+			padding: 2px 0
+			background: #FFF
+
+.row
+	margin: 0 -25px
+	padding: 0 100px
+	font-size: 0
+	+r3
+		padding: 0
+
+.col
+	display: inline-block
+	width: 50%
+	padding: 0 25px
+	font-size: 18px
+	vertical-align: top
+	p
+		margin-bottom: 20px
+	+r2
+		width: 100%
+
+.logo
+	display: block
+	margin-bottom: 40px
+
+.call
+	position: relative
+	float: right
+	margin-right: 35px
+	padding-top: 40px
+	text-transform: uppercase
+	font-size: 0
+	color: #312e31
+	cursor: pointer
+	z-index: 1
+	+med
+	&:hover
+		.call
+			&__text
+				color: #4d95a5
+				&:after
+					border-color: transparent transparent transparent #4d95a5
+			&-ico
+				background: #4D95A5
+	&__el
+		display: inline-block
+		text-align: right
+		font-size: 28px
+		vertical-align: middle
+	&__text
+		position: relative
+		font-size: 18px
+		color: #a83030
+		transition: color 0.2s ease
+		&:after
+			content: ""
+			position: absolute
+			top: 50%
+			left: 100%
+			margin: -8px 0 0 7px
+			transition: border-color 0.2s ease
+			+arr(11, 14, #a83030, r)
+	&-ico
+		display: inline-block
+		width: 70px
+		height: 70px
+		margin-left: 22px
+		background: #A83030
+		border-radius: 50%
+		vertical-align: middle
+		transition: background 0.2s ease
+		+vertical
+		&:after
+			content: ""
+			display: inline-block
+			vertical-align: middle
+			+s(call)
+
+.bar
+	position: absolute
+	bottom: 0
+	padding: 58px 100px
+	font-size: 24px
+	color: #FFF
+	background: rgba(#4c4c4c, 0.8)
+	filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0.8, StartColorStr='#CC4C4C4C', EndColorStr='#CC4C4C4C')
+	+r1
+		padding: 30px 20px
+
+.details
+	position: absolute
+	padding: 16px 29px
+	background: #ff7400
+	left: 38%
+	bottom: 230px
+	font-size: 24px
+	color: #fff
+	text-decoration: none
+	line-height: 1
+	+tr(0.2s)
+	+med
+	&:hover
+		color: #FFF
+		background: rgba(#4c4c4c, 0.8)
+		&:before
+			border-color: transparent transparent rgba(#4c4c4c, 0.8) transparent
+		&.details_arr-bottom
+			&:before
+				border-color: rgba(#4c4c4c, 0.8) transparent transparent transparent
+		small
+			color: #FFF
+	&.details_arr-bottom
+		top: 147px
+		left: auto
+		right: 35px
+		bottom: auto
+		&:before
+			top: 100%
+			bottom: auto
+			right: auto
+			left: 30px
+			+arr(35, 30, #ff7400, b)
+	&:before
+		content: ""
+		position: absolute
+		right: 35px
+		bottom: 100%
+		transition: border-color 0.2s ease
+		+arr(35, 30, #ff7400, t)
+	small
+		display: block
+		font-size: 14px
+		color: #000
+		transition: color 0.25s ease
+		+light
+	+r1
+		&:before
+			right: auto
+			left: 35px
+
+.what
+	padding-top: 50px
+	color: #FFF
+	.h2
+		padding-left: 100px
+		margin-bottom: 45px
+		+r3
+			padding-left: 0
+
+.tabs
+	margin-top: 27px
+	&__table
+		display: table
+		width: 100%
+		text-align: center
+		table-layout: fixed
+	&__cell
+		display: table-cell
+		vertical-align: bottom
+	&__label
+		position: relative
+		display: inline-block
+		padding: 15px 25px
+		font-size: 24px
+		background: #fff
+		color: #3096a8
+		cursor: pointer
+		+med
+		&:before,
+		&:after
+			content: ""
+			position: absolute
+			bottom: 0
+		&:before
+			right: 100%
+			+arr(20, 58, #fff, br)
+		&:after
+			left: 100%
+			+arr(20, 58, #fff, bl)
+		&.is-active
+			background: #41B9CE
+			color: #fff
+			box-shadow: none
+			&:before
+				border-color: transparent transparent #41B9CE transparent
+			&:after
+				border-color: transparent transparent transparent #41B9CE
+			.shadow
+				display: none
+	&__content
+		position: relative
+		padding: 52px 70px
+		text-align: center
+		background: #41B9CE
+		box-shadow: 2.5px 4.3px 5px rgba(49, 41, 33, 0.25)
+	&__decide
+		padding-bottom: 15px
+		text-transform: uppercase
+		font-size: 24px
+		+med
+		small
+			position: relative
+			display: inline-block
+			text-transform: none
+			font-size: 14px
+			color: rgba(#fff, 0.8)
+			+light
+			&:before,
+			&:after
+				content: ""
+				position: absolute
+				top: 50%
+				margin-top: -7.5px
+			&:before
+				right: 100%
+				margin-right: 20px
+				+arr(13, 15, #86e9fa, l)
+			&:after
+				left: 100%
+				margin-left: 20px
+				+arr(13, 15, #86e9fa, r)
+	.shadow
+		position: absolute
+		left: -19px
+		right: -19px
+		bottom: 0
+		height: 7px
+		box-shadow: inset 0 -4px 5px rgba(49, 41, 33, 0.25)
+		z-index: 1
+	+r2
+		&__cell
+			&.tabs__cell-center
+				display: none
+		&__label
+			display: block
+			&:before,
+			&:after
+				display: none
+		.shadow
+			left: 0
+			right: 0
+	+r3
+		&__label
+			padding: 15px 0
+			font-size: 19px
+
+.data
+	display: flex
+	margin-bottom: 27px
+	// justify-content: space-around
+	flex-flow: row wrap
+	align-items: stretch
+	&__bl
+		position: relative
+		width: 25%
+		margin: 20px 0
+		padding: 30px 20px 60px
+		color: #312e31
+		z-index: 0
+		&:before
+			content: ""
+			position: absolute
+			top: 0
+			bottom: 0
+			left: 20px
+			right: 20px
+			background: #FFF
+			z-index: -1
+	&__img
+		display: block
+		margin: 0 auto 17px
+		width: 112px
+		height: 112px
+		border: 1px solid #d9e2f0
+		border-radius: 50%
+		+cover
+	&__ttl
+		padding: 0 30px
+		text-align: left
+		+med
+	&__list
+		max-width: 150px
+		margin: 0 auto
+		text-align: left
+		font-size: 14px
+		li
+			position: relative
+			padding-left: 18px
+			&:before
+				content: "\2022"
+				position: absolute
+				top: 0
+				left: 0
+				color: #c2c2c3
+	&__info
+		position: absolute
+		left: 20px
+		right: 20px
+		bottom: 0
+		padding: 10px 40px
+		font-size: 14px
+		color: #fff
+		background: #4C4C4C
