@@ -39,7 +39,7 @@
 							<p>What we Do</p>
 							<small>more details...</small>
 						</a>
-						<a href="#" class="details details_arr-bottom">
+						<a href="#" class="details -arr-bottom">
 							<p>Who we Are</p>
 							<small>more details...</small>
 						</a>
@@ -62,7 +62,7 @@
 	</section>
 	<!-- end section -->
 	<!-- begin section  -->
-	<div class="section section_blue-bg">
+	<div class="section -blue-bg">
 		<div class="section__in">
 			<div class="l">
 				<div class="what">
@@ -75,28 +75,38 @@
 							<p>Our range of subscription products addresses the needs of consumer lenders in emerging markets of varying levels of advancement. All of our products are delivered through a flexible real-time API, enabling our clients to simplify integration into their existing credit processes, as well as  dramatically reduce their Time to Yes and increase control over the predictability of their credit outcomes.</p>
 						</div>
 					</div>
-					<!-- begin tabs  -->
-					<div class="tabs">
-						<div class="tabs__table">
-							<div class="tabs__cell">
-								<div class="tabs__label is-active">“Traditional”<i class="shadow"></i></div>
-							</div>
-							<div class="tabs__cell tabs__cell-center">
-								<div class="tabs__decide">
-									<p>data sources</p>
-									<small class="tabs__choice">select the tab</small>
-								</div>
-							</div>
-							<div class="tabs__cell">
-								<div class="tabs__label">“Big Data”<i class="shadow"></i></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end section -->
+	<!-- begin section  -->
+	<section class="section">
+		<div class="section__in">
+			<div class="l">
+				<!-- begin tabs  -->
+				<div class="tabs js-tabs">
+					<div class="tabs__table">
+						<div class="tabs__cell">
+							<div class="tabs__label js-tabs-label" data-index="0">“Traditional”<i class="shadow"></i></div>
+						</div>
+						<div class="tabs__cell -center">
+							<div class="tabs__decide">
+								<h3 class="h3">data sources</h3>
+								<small class="tabs__choice">select the tab</small>
 							</div>
 						</div>
-						<div class="tabs__content">
+						<div class="tabs__cell">
+							<div class="tabs__label js-tabs-label" data-index="1">“Big Data”<i class="shadow"></i></div>
+						</div>
+					</div>
+					<div class="tabs__content">
+						<div class="js-tabs-content">
 							<div class="data">
 								<div class="data__bl">
-									<div class="data__img" style="background-image: url(img/crowd.jpg)"></div>
+									<div class="data__img" style="background-image: url(img/crowd.png)"></div>
 									<p class="data__ttl">Demographic Score</p>
-									<ul class="data__list">
+									<ul class="list">
 										<li>Age</li>
 										<li>Gender</li>
 										<li>Marital Status</li>
@@ -108,9 +118,9 @@
 									<p class="data__info">Bank Partner Datasets</p>
 								</div>
 								<div class="data__bl">
-									<div class="data__img" style="background-image: url(img/security.jpg)"></div>
-									<p class="data__ttl">Anti-Fraud Score</p>
-									<ul class="data__list">
+									<div class="data__img -blue" style="background-image: url(img/security.png)"></div>
+									<p class="data__ttl">Anti-Fraud<br> Score</p>
+									<ul class="list">
 										<li>Age</li>
 										<li>Gender</li>
 										<li>Marital Status</li>
@@ -122,9 +132,9 @@
 									<p class="data__info">Bank Partner Datasets</p>
 								</div>
 								<div class="data__bl">
-									<div class="data__img" style="background-image: url(img/past-due.jpg)"></div>
+									<div class="data__img -orange" style="background-image: url(img/past-due.png)"></div>
 									<p class="data__ttl">Collection Efficiency Score</p>
-									<ul class="data__list">
+									<ul class="list">
 										<li>Age</li>
 										<li>Gender</li>
 										<li>Marital Status</li>
@@ -136,22 +146,212 @@
 									<p class="data__info">Bank Partner Datasets</p>
 								</div>
 								<div class="data__bl">
-									<div class="data__img" style="background-image: url(img/verify.jpg)"></div>
-									<p class="data__ttl">Collection Efficiency Score</p>
-									<ul class="data__list">
+									<div class="data__img -green" style="background-image: url(img/verify.png)"></div>
+									<p class="data__ttl">Database Verification Score</p>
+									<ul class="list">
 										<li>Existence of inconsistencies between data provided in the application and data on same individual from third-party databases.</li>
 									</ul>
 									<p class="data__info">Country-specific Databases</p>
 								</div>
 							</div>
-							<p>We also provide our partners with Value-Added Services in the areas related to our know-how, which include Best Management Retail Risk Management Consulting, Risk Based Pricing, Custom Scorecard Development, and Data Mining.</p>
+							<p class="tabs__info">We also provide our partners with Value-Added Services in the areas related to our know-how, which include Best Management Retail Risk Management Consulting, Risk Based Pricing, Custom Scorecard Development, and Data Mining.</p>
+						</div>
+						<div class="js-tabs-content">
+							<div class="data -max-width">
+								<div class="data__bl">
+									<div class="data__img -blue" style="background-image: url(img/mobile.png)"></div>
+									<p class="data__ttl">Mobile Score</p>
+									<ul class="list">
+										<li>Call frequency</li>
+										<li>Call counterparty geography</li>
+										<li>Call diversity</li>
+										<li>Inbound/outbound ratio</li>
+										<li>Use of mobile data</li>
+										<li>Use of credit funds</li>
+										<li>User mobility within network</li>
+									</ul>
+									<p class="data__info">Mobile Telco Partner Data</p>
+								</div>
+								<div class="data__bl -no-bg">
+									<h3 class="h3">Data-Mining</h3>
+									<p>Data-mining the consumer digital footprint presents a massive opportunity for consumer credit risk management, especially in EM.</p>
+									<button class="btn" type="button">Learn more</button>
+								</div>
+								<div class="data__bl">
+									<div class="data__img -orange" style="background-image: url(img/digital.png)"></div>
+									<p class="data__ttl">Digital Score</p>
+									<ul class="list">
+										<li>Device type and model</li>
+										<li>Browsing history</li>
+										<li>Cookies</li>
+										<li>Installed apps</li>
+										<li>Typical use of device</li>
+										<li>Social network activity</li>
+									</ul>
+									<p class="data__info">CredoLab Mobile App</p>
+								</div>
+							</div>
+							<p class="tabs__info">We also provide our partners with Value-Added Services in the areas related to our know-how, which include Best Management Retail Risk Management Consulting, Risk Based Pricing, Custom Scorecard Development, and Data Mining.</p>
 						</div>
 					</div>
-					<!-- end tabs -->
+				</div>
+				<!-- end tabs-->
+				<div class="who">
+					<h2 class="h2">Who we Are</h2>
+					<div class="row">
+						<div class="col -sm">
+							<p>CredoLab was founded by a group of senior executives with deep and successful track records of building Consumer Banking and Digital Economy businesses in the Emerging Markets.</p>
+						</div>
+						<div class="col -md">
+							<h3 class="h3 -mod">Executive Team</h3>
+							<div class="who__bl">
+								<h3 class="h3">Peter Barcak</h3>
+								<p class="who__title -ceo">CEO</p>
+								<div class="who__img -ceo" style="background-image: url('img/ceo.png')"></div>
+								<ul class="list">
+									<li>Served as CRO of Platinum Bank (Ukraine).</li>
+									<li>Previously Intesa Sanpaolo Group, Citibank, BNP Dresdner.</li>
+									<li>Active role in the launch of credit bureaus in Slovakia and Ukraine.</li>
+									<li>MBA from SDA Bocconi, University of Economics Bratislava.</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<h3 class="h3 -mod">Non-Executive Team</h3>
+					<div class="row">
+						<div class="col">
+							<div class="who__img" style="background-image: url('img/co-founder.png')"></div>
+							<h3 class="h3">Greg Krasnov</h3>
+							<p class="who__title">Co-Founder (Strategy)</p>
+							<ul class="list">
+								<li>Founder of Forum Capital.</li>
+								<li>Formerly Founder and CEO of Platinum Bank (Ukraine).</li>
+								<li>Previously 10 years of Private Equity at Innova Capital (Warsaw), Bank of America (London).</li>
+								<li>Cambridge University, Arizona State University.</li>
+							</ul>
+						</div>
+						<div class="col">
+							<div class="who__img" style="background-image: url('img/co-founder2.png')"></div>
+							<h3 class="h3">Tomek Borowski</h3>
+							<p class="who__title">Co-Founder (Ops)</p>
+							<ul class="list">
+								<li>Served as COO, Head of Portfolio Management of Platinum Bank (Ukraine).</li>
+								<li>Previously Raiffeisen Bank, GE Money Bank.</li>
+								<li>Six-Sigma certified quality expert.</li>
+								<li>University of Gdansk, Technical University of Gdansk.</li>
+							</ul>
+						</div>
+						<div class="col">
+							<div class="who__img" style="background-image: url('img/co-founder3.png')"></div>
+							<h3 class="h3">Adrian Chng</h3>
+							<p class="who__title">Co-Founder (BusDev)</p>
+							<ul class="list">
+								<li>Founder of Fintonia Group.</li>
+								<li>Formerly CEO of jobsDB.com, leading pan-Asian jobs portal with over 1,000 employees</li>
+								<li>Previously with Bluescope Asia (CFO, CorpDev).</li>
+							</ul>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
+	</section>
+	<!-- end section -->
+	<!-- begin section  -->
+	<section class="section -blue-bg">
+		<div class="section__in">
+			<div class="l">
+				<div class="news">
+					<h2 class="h2">News</h2>
+					<div class="news__bl">
+						<div class="news__el">
+							<p class="news__ttl">News</p>
+							<p>Credolab provides subscription-based tools and value-added services that enable emerging markets consumer lenders to reduce the cost of risk, increase operational efficiency. <a href="#" class="news__details">details</a></p>
+						</div>
+						<div class="news__el">
+							<p class="news__ttl">News</p>
+							<p>Credolab provides subscription-based tools and value-added services that enable emerging markets consumer lenders to reduce the cost of risk, increase operational efficiency. <a href="#" class="news__details">details</a></p>
+						</div>
+						<div class="news__el">
+							<p class="news__ttl">News</p>
+							<p>Credolab provides subscription-based tools and value-added services that enable emerging markets consumer lenders to reduce the cost of risk, increase operational efficiency. <a href="#" class="news__details">details</a></p>
+						</div>
+					</div>
+					<div class="more js-more">
+						<div class="more__in">
+							<a href="#" class="btn js-more-btn">More news</a>
+							<div class="pagination">
+								<a href="#" class="pagination__prev"></a>
+								<ul class="pagination__list">
+									<li><a href="#">1</a></li>
+									<li><span class="pagination__dots">...</span></li>
+									<li><a href="#">3</a></li>
+									<li><a href="#" class="is-active">4</a></li>
+									<li><a href="#">5</a></li>
+									<li><span class="pagination__dots">...</span></li>
+									<li><a href="#">9</a></li>
+								</ul>
+								<a href="#" class="pagination__next"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="contacts">
+					<div class="row">
+						<div class="col -sm">
+							<h2 class="h2">Contacts</h2>
+							<p>50 CHIN SWEE ROAD <br>#09-04 THONG CHAI BUILDING SINGAPORE 169874</p>
+							<p class="contacts__num">+65 3158 1129</p>
+						</div>
+						<div class="col -md">
+							<h2 class="h2">Get Answers</h2>
+							<form class="form">
+								<div class="form__field">
+									<input class="input" type="text" placeholder="Your name">
+								</div>
+								<div class="form__field">
+									<input class="input" type="text" placeholder="Your phone number">
+								</div>
+								<div class="form__field">
+									<textarea class="textarea" placeholder="Your question"></textarea>
+								</div>
+								<button class="btn" type="send">Send</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="location">
+				<div class="location__logo">
+					<a href="#" class="logo"><img src="img/logo-dark.png" alt=""></a>
+				</div>
+				<div class="map">
+				<div id="map"></div>
+					<script>
+						var map;
+						function initMap() {
+							var map = new google.maps.Map(document.getElementById('map'), {
+								zoom: 17,
+								center: {lat: 1.2876714, lng: 103.8404072},
+								zoomControl: true,
+								scrollwheel: false,
+								mapTypeControlOptions: {
+									mapTypeIds: [google.maps.MapTypeId.ROADMAP]
+								}
+							});
+							var marker = new google.maps.Marker({
+								position: {lat: 1.2877572, lng: 103.840343},
+								map: map,
+								icon:'img/marker.png'
+							});
+						}
+					</script>
+					<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCPLx_osAJ33YNibIjaqX9uH5kbYIlNJVY&callback=initMap" async defer></script>
+				</div>
+				
+			</div>
+		</div>
+	</section>
 	<!-- end section -->
 </div>
 <!-- END out-->

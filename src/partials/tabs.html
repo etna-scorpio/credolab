@@ -1,73 +1,112 @@
 <!-- begin tabs  -->
-<div class="tabs">
+<div class="tabs js-tabs">
 	<div class="tabs__table">
 		<div class="tabs__cell">
-			<div class="tabs__label is-active">“Traditional”<i class="shadow"></i></div>
+			<div class="tabs__label js-tabs-label" data-index="0">“Traditional”<i class="shadow"></i></div>
 		</div>
-		<div class="tabs__cell tabs__cell-center">
+		<div class="tabs__cell -center">
 			<div class="tabs__decide">
-				<p>data sources</p>
+				<h3 class="h3">data sources</h3>
 				<small class="tabs__choice">select the tab</small>
 			</div>
 		</div>
 		<div class="tabs__cell">
-			<div class="tabs__label">“Big Data”<i class="shadow"></i></div>
+			<div class="tabs__label js-tabs-label" data-index="1">“Big Data”<i class="shadow"></i></div>
 		</div>
 	</div>
 	<div class="tabs__content">
-		<div class="data">
-			<div class="data__bl">
-				<div class="data__img" style="background-image: url(img/crowd.jpg)"></div>
-				<p class="data__ttl">Demographic Score</p>
-				<ul class="data__list">
-					<li>Age</li>
-					<li>Gender</li>
-					<li>Marital Status</li>
-					<li>Education</li>
-					<li>Location</li>
-					<li>Use of credit funds</li>
-					<li>Origination channel type</li>
-				</ul>
-				<p class="data__info">Bank Partner Datasets</p>
+		<div class="js-tabs-content">
+			<div class="data">
+				<div class="data__bl">
+					<div class="data__img" style="background-image: url(img/crowd.png)"></div>
+					<p class="data__ttl">Demographic Score</p>
+					<ul class="list">
+						<li>Age</li>
+						<li>Gender</li>
+						<li>Marital Status</li>
+						<li>Education</li>
+						<li>Location</li>
+						<li>Use of credit funds</li>
+						<li>Origination channel type</li>
+					</ul>
+					<p class="data__info">Bank Partner Datasets</p>
+				</div>
+				<div class="data__bl">
+					<div class="data__img -blue" style="background-image: url(img/security.png)"></div>
+					<p class="data__ttl">Anti-Fraud<br> Score</p>
+					<ul class="list">
+						<li>Age</li>
+						<li>Gender</li>
+						<li>Marital Status</li>
+						<li>Education</li>
+						<li>Location</li>
+						<li>Use of credit funds</li>
+						<li>Origination channel type</li>
+					</ul>
+					<p class="data__info">Bank Partner Datasets</p>
+				</div>
+				<div class="data__bl">
+					<div class="data__img -orange" style="background-image: url(img/past-due.png)"></div>
+					<p class="data__ttl">Collection Efficiency Score</p>
+					<ul class="list">
+						<li>Age</li>
+						<li>Gender</li>
+						<li>Marital Status</li>
+						<li>Education</li>
+						<li>Location</li>
+						<li>Use of credit funds</li>
+						<li>Origination channel type</li>
+					</ul>
+					<p class="data__info">Bank Partner Datasets</p>
+				</div>
+				<div class="data__bl">
+					<div class="data__img -green" style="background-image: url(img/verify.png)"></div>
+					<p class="data__ttl">Database Verification Score</p>
+					<ul class="list">
+						<li>Existence of inconsistencies between data provided in the application and data on same individual from third-party databases.</li>
+					</ul>
+					<p class="data__info">Country-specific Databases</p>
+				</div>
 			</div>
-			<div class="data__bl">
-				<div class="data__img" style="background-image: url(img/security.jpg)"></div>
-				<p class="data__ttl">Anti-Fraud Score</p>
-				<ul class="data__list">
-					<li>Age</li>
-					<li>Gender</li>
-					<li>Marital Status</li>
-					<li>Education</li>
-					<li>Location</li>
-					<li>Use of credit funds</li>
-					<li>Origination channel type</li>
-				</ul>
-				<p class="data__info">Bank Partner Datasets</p>
-			</div>
-			<div class="data__bl">
-				<div class="data__img" style="background-image: url(img/past-due.jpg)"></div>
-				<p class="data__ttl">Collection Efficiency Score</p>
-				<ul class="data__list">
-					<li>Age</li>
-					<li>Gender</li>
-					<li>Marital Status</li>
-					<li>Education</li>
-					<li>Location</li>
-					<li>Use of credit funds</li>
-					<li>Origination channel type</li>
-				</ul>
-				<p class="data__info">Bank Partner Datasets</p>
-			</div>
-			<div class="data__bl">
-				<div class="data__img" style="background-image: url(img/verify.jpg)"></div>
-				<p class="data__ttl">Collection Efficiency Score</p>
-				<ul class="data__list">
-					<li>Existence of inconsistencies between data provided in the application and data on same individual from third-party databases.</li>
-				</ul>
-				<p class="data__info">Country-specific Databases</p>
-			</div>
+			<p class="tabs__info">We also provide our partners with Value-Added Services in the areas related to our know-how, which include Best Management Retail Risk Management Consulting, Risk Based Pricing, Custom Scorecard Development, and Data Mining.</p>
 		</div>
-		<p>We also provide our partners with Value-Added Services in the areas related to our know-how, which include Best Management Retail Risk Management Consulting, Risk Based Pricing, Custom Scorecard Development, and Data Mining.</p>
+		<div class="js-tabs-content">
+			<div class="data -max-width">
+				<div class="data__bl">
+					<div class="data__img -blue" style="background-image: url(img/mobile.png)"></div>
+					<p class="data__ttl">Mobile Score</p>
+					<ul class="list">
+						<li>Call frequency</li>
+						<li>Call counterparty geography</li>
+						<li>Call diversity</li>
+						<li>Inbound/outbound ratio</li>
+						<li>Use of mobile data</li>
+						<li>Use of credit funds</li>
+						<li>User mobility within network</li>
+					</ul>
+					<p class="data__info">Mobile Telco Partner Data</p>
+				</div>
+				<div class="data__bl -no-bg">
+					<h3 class="h3">Data-Mining</h3>
+					<p>Data-mining the consumer digital footprint presents a massive opportunity for consumer credit risk management, especially in EM.</p>
+					<button class="btn" type="button">Learn more</button>
+				</div>
+				<div class="data__bl">
+					<div class="data__img -orange" style="background-image: url(img/digital.png)"></div>
+					<p class="data__ttl">Digital Score</p>
+					<ul class="list">
+						<li>Device type and model</li>
+						<li>Browsing history</li>
+						<li>Cookies</li>
+						<li>Installed apps</li>
+						<li>Typical use of device</li>
+						<li>Social network activity</li>
+					</ul>
+					<p class="data__info">CredoLab Mobile App</p>
+				</div>
+			</div>
+			<p class="tabs__info">We also provide our partners with Value-Added Services in the areas related to our know-how, which include Best Management Retail Risk Management Consulting, Risk Based Pricing, Custom Scorecard Development, and Data Mining.</p>
+		</div>
 	</div>
 </div>
-<!-- end tabs -->
+<!-- end tabs-->

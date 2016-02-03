@@ -30,12 +30,16 @@
 
 // fonts
 +font(helvetica-light, helvetica-light)
++font(helvetica-lightitalic, helvetica-lightitalic)
 +font(helvetica-medium, helvetica-medium)
 
 =light
 	font-family: "helvetica-light", Helvetica, sans-serif
+=italic
+	font-family: "helvetica-lightitalic", Helvetica, sans-serif
 =med
 	font-family: "helvetica-medium", Helvetica, sans-serif
+	font-weight: normal
 
 // media
 =r1
@@ -47,7 +51,7 @@
 		@content
 
 =r3
-	@media only screen and (max-width: 660px)
+	@media only screen and (max-width: 690px)
 		@content
 
 // blocks
@@ -57,10 +61,113 @@ body
 	line-height: 1.2
 	letter-spacing: 0.05em
 	+light
+	+r3
+		font-size: 15px
+
+small
+	display: block
 
 .out
 	overflow: hidden
 
-
 .h2
 	font-size: 48px
+	+r3
+		font-size: 35px
+
+.h3
+	font-size: 24px
+	text-transform: uppercase
+	letter-spacing: 0.08em
+	+med
+	&.-mod
+		padding-bottom: 5px
+		color: #3096a8
+		border-bottom: 1px solid #e7e7e7
+		+light
+	+r3
+		font-size: 20px
+
+.btn
+	display: inline-block
+	padding: 21px 35px 22px
+	font-size: 24px
+	color: #FFF
+	background: #FF7400
+	cursor: pointer
+	+tr(0.25s)
+	+med
+	&:hover
+		background: #ED001A
+	+r3
+		font-size: 18px
+
+.list
+	font-size: 14px
+	li
+		position: relative
+		padding-left: 15px
+		&:before
+			content: "\2022"
+			position: absolute
+			top: 0
+			left: 0
+			color: #c2c2c3
+
+.row
+	margin: 0 -25px
+	padding: 0 100px
+	+clr
+	+r3
+		padding: 0
+
+.col
+	float: left
+	width: 50%
+	padding: 0 25px
+	vertical-align: top
+	&.-sm
+		width: 37%
+	&.-md
+		width: 63%
+	&:nth-last-child(n+3),
+	&:nth-last-child(n+3) ~ .col
+		width: 33%
+	p
+		margin-bottom: 20px
+	+r2
+		width: 100%
+		float: none
+		&.-sm,
+		&.-md,
+		&:nth-last-child(n+3),
+		&:nth-last-child(n+3) ~ .col
+			width: 100%
+			float: none
+		&:nth-last-child(n+3),
+		&:nth-last-child(n+3) ~ .col
+			margin-bottom: 20px
+
+.form
+	+clr
+	&__field
+		margin-bottom: 8px
+	.btn
+		float: right
+		min-width: 201px
+		margin-top: 23px
+
+.input
+	display: block
+	width: 100%
+	padding: 10px 16px
+	font-size: 18px
+	border: 0
+	+placeholder
+		color: #a0a0a0
+		+italic
+
+.textarea
+	@extend .input
+	min-height: 90px
+	resize: none
