@@ -3,6 +3,100 @@
 	margin: 0 auto
 	padding: 0 15px
 
+.header
+	position: fixed
+	top: -75px
+	left: 0
+	right: 0
+	min-width: 320px
+	height: 75px
+	background: #F5F5F5
+	z-index: 9
+	+tr(0.3s)
+	&.is-active
+		top: 0
+	&__in
+		+clr
+	&__bl
+		float: left
+		padding-top: 26px
+	.logo
+		display: inline-block
+		max-width: 147px
+		margin-right: 45px
+		vertical-align: middle
+	.call
+		margin-right: 0
+		padding-top: 16px
+	+r1
+		.logo
+			margin-right: 10px
+		&__menu
+			font-size: 16px
+			li
+				padding: 0 10px
+	+r3
+		.call__el
+			display: none
+
+.menu
+	display: inline-block
+	vertical-align: middle
+	&.is-active
+		left: 0
+	&__list
+		font-size: 18px
+		+med
+		+clr
+		li
+			float: left
+			padding: 0 17px
+		a
+			text-decoration: none
+			color: #312e31
+			&.is-active,
+			&:hover
+				color: #3096a8
+				text-decoration: underline
+	+r1
+		&__list
+			font-size: 16px
+			li
+				padding: 0 10px
+	+r2
+		position: fixed
+		top: 0
+		left: -250px
+		bottom: 0
+		width: 250px
+		padding: 20px
+		background: #F5F5F5
+		+tr(0.3s)
+		&__list
+			li
+				float: none
+				padding: 7px 0
+
+.btn-menu
+	display: none
+	position: relative
+	vertical-align: middle
+	width: 26px
+	height: 18px
+	border-top: 2px solid #000
+	border-bottom: 2px solid #000
+	&:before
+		content: ""
+		position: absolute
+		top: 50%
+		width: 100%
+		height: 2px
+		margin-top: -1px
+		background: #000
+	+r2
+		display: inline-block
+
+
 .section
 	position: relative
 	&:before
@@ -13,7 +107,7 @@
 		right: 0
 		bottom: 0
 		background: #fff
-		transform: skewY(5deg)
+		transform: skewY(8deg)
 	&.-blue-bg
 		&:before
 			background: #3096a8
@@ -22,11 +116,10 @@
 		z-index: 1
 
 .main
-	padding-bottom: 110px
+	padding-bottom: 25px
 	&__in
 		position: relative
 		min-height: 715px
-		margin-bottom: 65px
 		background-image: url(../img/main-bg.png)
 		background-position: right bottom
 		background-repeat: no-repeat
@@ -50,13 +143,42 @@
 		color: #3096a8
 	.logo
 		margin-bottom: 40px
+	.call
+		padding-top: 40px
+	.row
+		padding-top: 65px
 	+r1
 		&__bl
 			padding-left: 0
 	+r2
-		&__list a
+		padding-bottom: 100px
+		&__in
+			background-position: center bottom
+		&__bl
+			margin-top: 0
+		&__list a,
+		&__motto span
+			display: inline-block
 			padding: 2px 0
 			background: #FFF
+		.logo
+			max-width: 280px
+	+r3
+		padding-bottom: 50px
+		&__in
+			min-height: auto
+		&__bl
+			float: none
+			padding-top: 40px
+			text-align: center
+		&__motto
+			margin: 0 auto 30px
+			font-size: 19px
+		&__list a,
+		&__motto span
+			padding: 2px
+		.logo
+			margin: 0 auto 40px
 
 .logo
 	display: block
@@ -68,7 +190,6 @@
 	position: relative
 	float: right
 	margin-right: 35px
-	padding-top: 40px
 	text-transform: uppercase
 	font-size: 0
 	color: #312e31
@@ -83,6 +204,20 @@
 					border-color: transparent transparent transparent #4d95a5
 			&-ico
 				background: #4D95A5
+	&.-small
+		.call
+			&__el
+				font-size: 18px
+			&__text
+				font-size: 12px
+				&:after
+					margin-top: -6px
+					border-width: 5px 0 5px 7px
+			&-ico
+				width: 46px
+				height: 46px
+				&:after
+					+s(call-sm)
 	&__el
 		display: inline-block
 		text-align: right
@@ -116,6 +251,10 @@
 			display: inline-block
 			vertical-align: middle
 			+s(call)
+	+r3
+		margin-right: 0
+		&__el
+			font-size: 24px
 
 .bar
 	position: absolute
@@ -127,6 +266,10 @@
 	filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0.8, StartColorStr='#CC4C4C4C', EndColorStr='#CC4C4C4C')
 	+r1
 		padding: 30px 20px
+	+r3
+		position: relative
+		margin-top: 100px
+		font-size: 18px
 
 .details
 	position: absolute
@@ -145,7 +288,7 @@
 		background: rgba(#4c4c4c, 0.8)
 		&:before
 			border-color: transparent transparent rgba(#4c4c4c, 0.8) transparent
-		&.details_arr-bottom
+		&.-arr-bottom
 			&:before
 				border-color: rgba(#4c4c4c, 0.8) transparent transparent transparent
 		small
@@ -177,9 +320,13 @@
 		&:before
 			right: auto
 			left: 35px
+	+r2
+		left: 20%
+	+r3
+		display: none
 
 .what
-	padding: 50px 0 520px
+	padding: 25px 0 570px
 	color: #FFF
 	.h2
 		padding-left: 100px
@@ -191,8 +338,8 @@
 
 .tabs
 	position: relative
-	top: -500px
-	margin-bottom: -400px
+	top: -550px
+	margin-bottom: -443px
 	color: #FFF
 	&__table
 		display: table
@@ -210,18 +357,28 @@
 		background: #fff
 		color: #3096a8
 		cursor: pointer
+		transition-property: background, color
+		transition-duration: 0.25s
 		+med
 		&:before,
 		&:after
 			content: ""
 			position: absolute
 			bottom: 0
+			+tr(border-color 0.25s)
 		&:before
 			right: 100%
 			+arr(20, 58, #fff, br)
 		&:after
 			left: 100%
 			+arr(20, 58, #fff, bl)
+		&:hover
+			background: #ff7400
+			color: #fff
+			&:before
+				border-color: transparent transparent #ff7400 transparent
+			&:after
+				border-color: transparent transparent transparent #ff7400
 		&.is-active
 			background: #41B9CE
 			color: #fff
@@ -261,11 +418,12 @@
 				margin-left: 20px
 				+arr(13, 15, #86e9fa, r)
 	&__info
+		margin-top: 37px
 		padding: 0 20px
 	.shadow
 		position: absolute
-		left: -19px
-		right: -19px
+		left: -20px
+		right: -20px
 		bottom: 0
 		height: 7px
 		box-shadow: inset 0 -4px 5px rgba(49, 41, 33, 0.25)
@@ -291,13 +449,12 @@
 
 .data
 	display: flex
-	margin-bottom: 37px
 	flex-flow: row wrap
 	align-items: stretch
 	justify-content: space-around
 	&.-max-width
 		max-width: 735px
-		margin: 0 auto 51px
+		margin: 0 auto
 	&__bl
 		position: relative
 		width: 245px
@@ -362,7 +519,7 @@
 	+r1
 		&__bl
 			width: 270px
-			padding-top: 20px
+			padding: 20px 20px 40px
 			&.-no-bg
 				padding: 0 20px
 				order: -1
@@ -389,6 +546,8 @@
 			margin-bottom: 10px
 			font-size: 18px
 			padding: 0
+		.list
+			margin-bottom: 15px
 
 .who
 	max-width: 880px
@@ -405,7 +564,7 @@
 	&__img
 		width: 110px
 		height: 110px
-		margin-bottom: 20px
+		margin: 20px 0
 		border-radius: 50%
 		+cover
 		&.-ceo
@@ -436,17 +595,18 @@
 			text-align: center
 		&__img
 			float: none
-			margin: 0 auto 20px
+			margin: 20px auto
 		.list
 			max-width: 500px
 			margin: 0 auto
 		&__bl
 			.list
 				max-width: initial
-				margin: 50px 0 0
+				margin: 30px 0 0
 		.h3
 			text-align: center
 	+r3
+		padding-bottom: 200px
 		&__bl
 			.list
 				margin-top: 0
@@ -458,13 +618,15 @@
 				margin: 0 auto 20px
 		.list
 			font-size: 15px
+		.row
+			margin-bottom: 40px
 
 .news
 	position: relative
 	top: -245px
 	margin-bottom: -157px
 	&__bl
-		padding: 81px 100px
+		padding: 83px 100px 58px
 		color: #312e31
 		background: #FFF
 		border: 2px solid #3096a8
@@ -480,7 +642,7 @@
 		&:hover
 			text-decoration: none
 	.h2
-		margin-bottom: 20px
+		margin-bottom: 23px
 		padding-left: 100px
 		color: #312e31
 	+r2
@@ -491,7 +653,7 @@
 
 .more
 	position: absolute
-	min-height: 71px
+	height: 71px
 	left: 100px
 	right: 100px
 	bottom: -35.5px
@@ -504,7 +666,7 @@
 		right: 0
 		background: #fff
 		content: ""
-		width: 196px
+		width: 204px
 		border: 2px solid #3096a8
 		+tr(0.5s)
 	&.is-active
@@ -518,12 +680,12 @@
 		position: relative
 		z-index: 1
 	.btn
-		padding: 19px 31px 20px
+		padding: 19px 35px 21px
+		margin: 2px 2px 2px 0
 		text-decoration: none
 		background: #fff
 		color: #3096a8
-		border: 2px solid #3096a8
-		transition: opacity 0.2s, visibility 0.2s
+		transition: opacity 0.5s, visibility 0.5s
 		&.is-hidden
 			position: absolute
 			opacity: 0
@@ -534,16 +696,23 @@
 	+r2
 		left: 0
 		right: 0
+	+r3
+		height: 61px
+		&:before
+			width: 173px
+		.btn
+			padding: 19px 35px 17px
+
 
 .pagination
 	position: absolute
 	text-align: center
-	font-size: 24px
+	font-size: 0
 	color: #3096a8
 	line-height: 71px
 	opacity: 0
 	visibility: hidden
-	transition: opacity 0.52s, visibility 0.52s
+	transition: opacity 0.6s, visibility 0.6s
 	+med
 	&__next,
 	&__prev
@@ -564,6 +733,7 @@
 		letter-spacing: 0.35em
 	&__list
 		display: inline-block
+		font-size: 24px
 		vertical-align: middle
 		li
 			display: inline-block
@@ -579,10 +749,12 @@
 				color: #FF7400
 				text-decoration: underline
 	+r3
-		font-size: 20px
+		line-height: 61px
+		&__list
+			font-size: 20px
 
 .contacts
-	padding-bottom: 55px
+	padding-bottom: 48px
 	color: #fff
 	&__num
 		margin-top: 30px

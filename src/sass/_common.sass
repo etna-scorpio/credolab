@@ -62,10 +62,13 @@ body
 	letter-spacing: 0.05em
 	+light
 	+r3
-		font-size: 15px
+		font-size: 16px
 
 small
 	display: block
+
+a
+	-webkit-tap-highlight-color: transparent
 
 .out
 	overflow: hidden
@@ -91,6 +94,7 @@ small
 .btn
 	display: inline-block
 	padding: 21px 35px 22px
+	text-decoration: none
 	font-size: 24px
 	color: #FFF
 	background: #FF7400
@@ -171,3 +175,42 @@ small
 	@extend .input
 	min-height: 90px
 	resize: none
+
+.overlay
+	position: fixed
+	min-width: 280px
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	padding: 20px
+	background: rgba(#000, 0.8)
+	z-index: 10
+	white-space: nowrap
+	visibility: hidden
+	opacity: 0
+	+vertical
+	+tr(0.5s)
+	&.is-active
+		visibility: visible
+		opacity: 1
+
+.popup
+	display: inline-block
+	width: 100%
+	max-width: 855px
+	padding: 100px 130px 68px
+	white-space: normal
+	vertical-align: middle
+	background: rgba(#3096a8, 0.5)
+	.btn
+		text-transform: uppercase
+	.h2
+		margin-bottom: 45px
+		text-align: left
+		color: #FFF
+		letter-spacing: 0.05
+	+r2
+		padding: 100px 50px 68px
+	+r3
+		padding: 50px 20px 34px
