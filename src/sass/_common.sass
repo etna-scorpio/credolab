@@ -75,6 +75,7 @@ a
 
 .h2
 	font-size: 48px
+	font-weight: normal
 	+r3
 		font-size: 35px
 
@@ -196,6 +197,7 @@ a
 		opacity: 1
 
 .popup
+	position: relative
 	display: inline-block
 	width: 100%
 	max-width: 855px
@@ -203,6 +205,10 @@ a
 	white-space: normal
 	vertical-align: middle
 	background: rgba(#3096a8, 0.5)
+	&__close
+		position: absolute
+		top: 50px
+		right: 50px
 	.btn
 		text-transform: uppercase
 	.h2
@@ -214,3 +220,23 @@ a
 		padding: 100px 50px 68px
 	+r3
 		padding: 50px 20px 34px
+
+
+.close-ico
+	position: relative
+	display: block
+	width: 30px
+	height: 30px
+	&:before,
+	&:after
+		content: ""
+		position: absolute
+		top: 50%
+		left: 0
+		width: 100%
+		height: 2px
+		background: #FFF
+	&:before
+		transform: rotate(45deg)
+	&:after
+		transform: rotate(-45deg)
