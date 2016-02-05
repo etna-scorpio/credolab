@@ -116,7 +116,7 @@ a { -webkit-tap-highlight-color: transparent; }
 .popup { position: relative; display: inline-block; width: 100%; max-width: 855px; padding: 100px 130px 68px; white-space: normal; vertical-align: middle; background: rgba(48, 150, 168, 0.5); }
 .popup__close { position: absolute; top: 50px; right: 50px; }
 .popup .btn { text-transform: uppercase; }
-.popup .h2 { margin-bottom: 45px; text-align: left; color: #FFF; letter-spacing: 0.05; }
+.popup .h2 { margin-bottom: 45px; text-align: left; color: #FFF; letter-spacing: 0.05em; }
 
 .close-ico { position: relative; display: block; width: 30px; height: 30px; }
 .close-ico:before, .close-ico:after { content: ""; position: absolute; top: 50%; left: 0; width: 100%; height: 2px; background: #FFF; }
@@ -346,6 +346,8 @@ a { -webkit-tap-highlight-color: transparent; }
  .btn{ font-size: 18px; }
  .row{ padding: 0; }
  .popup{ padding: 50px 20px 34px; }
+ .popup__close{ top: 15px; right: 10px; }
+ .popup .h2{ text-align: center; }
  .header .call__el{ display: none; }
  .main{ padding-bottom: 50px; }
  .main__in{ min-height: auto; }
