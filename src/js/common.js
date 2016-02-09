@@ -38,15 +38,6 @@ $(document).ready(function() {
 			$('.js-more').removeClass('is-active');
 			$('.js-more-btn').removeClass('is-hidden');
 			$('.js-menu').removeClass('is-active');
-
-			if ( !$('.js-overlay').hasClass('is-active') ) {
-				$('.js-header').css('padding-right', '0');
-				$('body').css({
-					'overflow': 'auto',
-					'padding-right': '0'
-				});
-			}
-
 		});
 	}
 
@@ -100,6 +91,7 @@ $(document).ready(function() {
 				'padding-right': scrollBarWidth
 			});
 			$('.js-header').css('padding-right', scrollBarWidth);
+
 			return false;
 		});
 
@@ -107,7 +99,12 @@ $(document).ready(function() {
 
 	function hidePopup() {
 		$('.js-close').click(function(evt) {
-			$(this).closest('.js-overlay').fadeOut(300);
+			$(this).parents('.js-overlay').fadeOut(300);
+			$('.js-header').css('padding-right', '0');
+			$('body').css({
+				'overflow': 'auto',
+				'padding-right': '0'
+			});
 			evt.preventDefault();
 		});
 	}
@@ -218,7 +215,7 @@ $(document).ready(function() {
 				post_data = {
 					'name': $('#form input[name=name]').val(),
 					'tel': $('#form input[name=tel]').val(),
-					'comment': $('#form input[name=comment]').val()
+					'comment': $('#form textarea[name=comment]').val()
 				};
 				// Ajax post data to server
 				$.post('send.php', post_data, function(response) {
