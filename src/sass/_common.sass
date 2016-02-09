@@ -178,6 +178,7 @@ a
 	resize: none
 
 .overlay
+	display: none
 	position: fixed
 	min-width: 280px
 	top: 0
@@ -188,10 +189,7 @@ a
 	background: rgba(#000, 0.8)
 	z-index: 10
 	white-space: nowrap
-	visibility: hidden
-	opacity: 0
 	+vertical
-	+tr(0.5s)
 	&.is-active
 		visibility: visible
 		opacity: 1
@@ -205,9 +203,6 @@ a
 	white-space: normal
 	vertical-align: middle
 	background: rgba(#3096a8, 0.5)
-	opacity: 0
-	visibility: hidden
-	position: absolute
 	&__close
 		position: absolute
 		top: 50px

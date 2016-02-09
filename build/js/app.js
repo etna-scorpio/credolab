@@ -132,8 +132,7 @@ $(document).ready(function() {
 
 	function callPopup() {
 		$('.js-show-popup').click(function(evt) {
-			$('.js-overlay').addClass('is-active');
-			$('.js-popup').addClass('is-active');
+			$('.js-popup').fadeIn(300);
 			$('body').css({
 				'overflow': 'hidden',
 				'padding-right': scrollBarWidth
@@ -146,8 +145,7 @@ $(document).ready(function() {
 
 	function hidePopup() {
 		$('.js-close').click(function(evt) {
-			$(this).closest('.js-overlay').removeClass('is-active');
-			$('.js-popup').removeClass('is-active');
+			$(this).closest('.js-overlay').fadeOut(300);
 			evt.preventDefault();
 		});
 	}
@@ -220,7 +218,6 @@ $(document).ready(function() {
 	(function() {
 		var popup   = $('.js-popup'),
 			thanks  = $('.js-thanks-popup'),
-			overlay = $('.js-overlay'),
 			body    = $('body');
 		// welcome
 		$.validate({
@@ -237,17 +234,15 @@ $(document).ready(function() {
 					}
 					else {
 						// reset values in all input fields
-						popup.removeClass('is-active');
-						thanks.addClass('is-active');
+						popup.fadeOut(500);
+						thanks.fadeIn(500);
 						$('#popup-form').get(0).reset();
 						setTimeout(function() {
-							thanks.removeClass('is-active');
-							$('body').css({
+							thanks.fadeOut(300);
+							body.css({
 								'overflow': 'auto',
 								'padding-right': '0'
 							});
-							overlay.removeClass('is-active');
-							popup.delay(700).addClass('is-active');
 						}, 2000);
 					}
 				}, 'json');
@@ -267,17 +262,15 @@ $(document).ready(function() {
 				$.post('send.php', post_data, function(response) {
 					if (response.type == 'error') {}
 					else {
-						popup.removeClass('is-active');
-						thanks.addClass('is-active');
+						popup.fadeOut(500);
+						thanks.fadeIn(500);
 						$('#form').get(0).reset();
 						setTimeout(function() {
-							thanks.removeClass('is-active');
-							$('body').css({
+							thanks.fadeOut(300);
+							body.css({
 								'overflow': 'auto',
 								'padding-right': '0'
 							});
-							overlay.removeClass('is-active');
-							popup.delay(700).addClass('is-active');
 						}, 2000);
 					}
 				}, 'json');

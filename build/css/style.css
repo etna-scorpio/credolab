@@ -109,11 +109,11 @@ a { -webkit-tap-highlight-color: transparent; }
 
 .textarea { min-height: 90px; resize: none; }
 
-.overlay { position: fixed; min-width: 280px; top: 0; left: 0; right: 0; bottom: 0; padding: 20px; background: rgba(0, 0, 0, 0.8); z-index: 10; white-space: nowrap; visibility: hidden; opacity: 0; text-align: center; font-size: 0; -webkit-transition: 0.5s; transition: 0.5s; }
+.overlay { display: none; position: fixed; min-width: 280px; top: 0; left: 0; right: 0; bottom: 0; padding: 20px; background: rgba(0, 0, 0, 0.8); z-index: 10; white-space: nowrap; text-align: center; font-size: 0; }
 .overlay:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
 .overlay.is-active { visibility: visible; opacity: 1; }
 
-.popup { position: relative; display: inline-block; width: 100%; max-width: 855px; padding: 100px 130px 68px; white-space: normal; vertical-align: middle; background: rgba(48, 150, 168, 0.5); opacity: 0; visibility: hidden; position: absolute; }
+.popup { position: relative; display: inline-block; width: 100%; max-width: 855px; padding: 100px 130px 68px; white-space: normal; vertical-align: middle; background: rgba(48, 150, 168, 0.5); }
 .popup__close { position: absolute; top: 50px; right: 50px; }
 .popup.-thanks .h2 { text-align: center; }
 .popup.is-active { opacity: 1; visibility: visible; position: relative; }
