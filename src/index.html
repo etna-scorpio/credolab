@@ -243,15 +243,15 @@
 						</div>
 						<div class="col -md">
 							<h2 class="h2">Get Answers</h2>
-							<form class="form">
+							<form class="form" id="form">
 								<div class="form__field">
-									<input class="input" type="text" placeholder="Your name">
+									<input class="input" type="text" name="name" placeholder="Your name" data-validation="required">
 								</div>
 								<div class="form__field">
-									<input class="input" type="text" placeholder="Your phone number">
+									<input class="input" type="text" name="tel" placeholder="Your phone number" data-validation="required">
 								</div>
 								<div class="form__field">
-									<textarea class="textarea" placeholder="Your question"></textarea>
+									<textarea class="textarea" name="comment" placeholder="Your question"></textarea>
 								</div>
 								<button class="btn" type="send">Send</button>
 							</form>
@@ -273,15 +273,19 @@
 	<div class="popup js-popup">
 		<a href="#" class="popup__close js-close"><i class="close-ico"></i></a>
 		<h2 class="h2">Learn more</h2>
-		<form class="form">
+		<form class="form" id="popup-form">
 			<div class="form__field">
-				<input class="input" type="text" placeholder="Your name">
+				<input class="input" type="text" name="name" placeholder="Your name" data-validation="required">
 			</div>
 			<div class="form__field">
-				<input class="input" type="text" placeholder="Your phone number">
+				<input class="input" type="text" name="tel" placeholder="Your phone number" data-validation="required">
 			</div>
 			<button class="btn" type="send">Send</button>
 		</form>
+	</div>
+	<div class="popup -thanks js-thanks-popup">
+		<a href="#" class="popup__close js-close"><i class="close-ico"></i></a>
+		<h2 class="h2">Thank you! We will contact you soon</h2>
 	</div>
 </div>
 <!-- END out-->

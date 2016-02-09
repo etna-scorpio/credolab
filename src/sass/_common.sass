@@ -205,10 +205,20 @@ a
 	white-space: normal
 	vertical-align: middle
 	background: rgba(#3096a8, 0.5)
+	opacity: 0
+	visibility: hidden
+	position: absolute
 	&__close
 		position: absolute
 		top: 50px
 		right: 50px
+	&.-thanks
+		.h2
+			text-align: center
+	&.is-active
+		opacity: 1
+		visibility: visible
+		position: relative
 	.btn
 		text-transform: uppercase
 	.h2

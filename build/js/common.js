@@ -95,6 +95,7 @@ $(document).ready(function() {
 	function callPopup() {
 		$('.js-show-popup').click(function(evt) {
 			$('.js-overlay').addClass('is-active');
+			$('.js-popup').addClass('is-active');
 			$('body').css({
 				'overflow': 'hidden',
 				'padding-right': scrollBarWidth
@@ -108,6 +109,7 @@ $(document).ready(function() {
 	function hidePopup() {
 		$('.js-close').click(function(evt) {
 			$(this).closest('.js-overlay').removeClass('is-active');
+			$('.js-popup').removeClass('is-active');
 			evt.preventDefault();
 		});
 	}
@@ -175,6 +177,76 @@ $(document).ready(function() {
 		evt.preventDefault();
 		$('.js-slider').slick('slickPrev');
 	});
+
+	// form validation
+	(function() {
+		var popup   = $('.js-popup'),
+			thanks  = $('.js-thanks-popup'),
+			overlay = $('.js-overlay'),
+			body    = $('body');
+		// welcome
+		$.validate({
+			form: '#popup-form',
+			onSuccess: function() {
+				post_data = {
+					'name': $('#popup-form input[name=name]').val(),
+					'tel': $('#popup-form input[name=tel]').val()
+				};
+				// Ajax post data to server
+				$.post('send.php', post_data, function(response) {
+					if (response.type == 'error') {
+						console.log('error');
+					}
+					else {
+						// reset values in all input fields
+						popup.removeClass('is-active');
+						thanks.addClass('is-active');
+						$('#popup-form').get(0).reset();
+						setTimeout(function() {
+							thanks.removeClass('is-active');
+							$('body').css({
+								'overflow': 'auto',
+								'padding-right': '0'
+							});
+							overlay.removeClass('is-active');
+							popup.delay(700).addClass('is-active');
+						}, 2000);
+					}
+				}, 'json');
+				return false;
+			}
+		});
+		// footer
+		$.validate({
+			form : '#form',
+			onSuccess: function() {
+				post_data = {
+					'name': $('#form input[name=name]').val(),
+					'tel': $('#form input[name=tel]').val(),
+					'comment': $('#form input[name=comment]').val()
+				};
+				// Ajax post data to server
+				$.post('send.php', post_data, function(response) {
+					if (response.type == 'error') {}
+					else {
+						popup.removeClass('is-active');
+						thanks.addClass('is-active');
+						$('#form').get(0).reset();
+						setTimeout(function() {
+							thanks.removeClass('is-active');
+							$('body').css({
+								'overflow': 'auto',
+								'padding-right': '0'
+							});
+							overlay.removeClass('is-active');
+							popup.delay(700).addClass('is-active');
+						}, 2000);
+					}
+				}, 'json');
+				return false;
+			}
+		});
+	}());
 
 	changeTabs();
 	moreNews();

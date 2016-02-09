@@ -113,8 +113,10 @@ a { -webkit-tap-highlight-color: transparent; }
 .overlay:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
 .overlay.is-active { visibility: visible; opacity: 1; }
 
-.popup { position: relative; display: inline-block; width: 100%; max-width: 855px; padding: 100px 130px 68px; white-space: normal; vertical-align: middle; background: rgba(48, 150, 168, 0.5); }
+.popup { position: relative; display: inline-block; width: 100%; max-width: 855px; padding: 100px 130px 68px; white-space: normal; vertical-align: middle; background: rgba(48, 150, 168, 0.5); opacity: 0; visibility: hidden; position: absolute; }
 .popup__close { position: absolute; top: 50px; right: 50px; }
+.popup.-thanks .h2 { text-align: center; }
+.popup.is-active { opacity: 1; visibility: visible; position: relative; }
 .popup .btn { text-transform: uppercase; }
 .popup .h2 { margin-bottom: 45px; text-align: left; color: #FFF; letter-spacing: 0.05em; }
 
